@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dot_product.c                                      :+:      :+:    :+:   */
+/*   ft_tablen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aburroug <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/02 11:11:59 by aburroug          #+#    #+#             */
-/*   Updated: 2016/09/03 09:56:30 by aburroug         ###   ########.fr       */
+/*   Created: 2016/09/03 09:57:40 by aburroug          #+#    #+#             */
+/*   Updated: 2016/09/03 10:05:02 by aburroug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <rtv1.h>
+#include "rtv1.h"
 
-float	dot_product(t_vect *v1, t_vect *v2)
+size_t	ft_tablen(void **tab)
 {
-	return (v1->x * v2->x + v1->y * v2->y + v1->z * v2->z);
+	 int	len;
+
+	 len = 0;
+	 while (tab[len])
+		 len++;
+	 return (len);
 }

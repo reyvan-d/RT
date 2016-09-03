@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dot_product.c                                      :+:      :+:    :+:   */
+/*   ft_pixel_put_to_image.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aburroug <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/02 11:11:59 by aburroug          #+#    #+#             */
-/*   Updated: 2016/09/03 09:56:30 by aburroug         ###   ########.fr       */
+/*   Created: 2016/09/03 09:26:05 by aburroug          #+#    #+#             */
+/*   Updated: 2016/09/03 09:28:25 by aburroug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <rtv1.h>
+#include "rtv1.h"
 
-float	dot_product(t_vect *v1, t_vect *v2)
+void	ft_pixel_put_to_image(t_img *i, int x, int y, unsigned int color)
 {
-	return (v1->x * v2->x + v1->y * v2->y + v1->z * v2->z);
+	if (!i)
+		return ;
+	if (x > i->width || x < 0 || y < 0 || y > i->height)
+		return ;
+	i->udata[y * i->sl_div + x * i->bpp_div] = color;
 }

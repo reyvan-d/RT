@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dot_product.c                                      :+:      :+:    :+:   */
+/*   ft_len_untill.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aburroug <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/02 11:11:59 by aburroug          #+#    #+#             */
-/*   Updated: 2016/09/03 09:56:30 by aburroug         ###   ########.fr       */
+/*   Created: 2016/09/03 10:46:22 by aburroug          #+#    #+#             */
+/*   Updated: 2016/09/03 10:50:28 by aburroug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <rtv1.h>
+#include "rtv1.h"
 
-float	dot_product(t_vect *v1, t_vect *v2)
+size_t	ft_len_until(const char *str, char c)
 {
-	return (v1->x * v2->x + v1->y * v2->y + v1->z * v2->z);
+	size_t	len;
+
+	len = 0;
+	while (str[len] && str[len] != c)
+		len++;
+	return (len);
 }

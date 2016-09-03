@@ -1,18 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dot_product.c                                      :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aburroug <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/02 11:11:59 by aburroug          #+#    #+#             */
-/*   Updated: 2016/09/03 09:56:30 by aburroug         ###   ########.fr       */
+/*   Created: 2016/09/03 10:51:05 by aburroug          #+#    #+#             */
+/*   Updated: 2016/09/03 10:55:42 by aburroug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <rtv1.h>
+#include "rtv1.h"
 
-float	dot_product(t_vect *v1, t_vect *v2)
+char	*ft_strrev(char *s)
 {
-	return (v1->x * v2->x + v1->y * v2->y + v1->z * v2->z);
+	int		i;
+	int		len;
+	char	tmp;
+
+	
+	if (str)
+	{
+		i = 0;
+		len = ft_strlen(str);
+		while (i < len / 2)
+		{
+			tmp = str[i];
+			str[i] = str[len - i - 1];
+			str[len - i - 1] = tmp;
+			i++;
+		}
+	}
+	return (str);
 }
