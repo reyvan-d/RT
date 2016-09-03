@@ -6,13 +6,13 @@
 /*   By: aburroug <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/02 11:24:42 by aburroug          #+#    #+#             */
-/*   Updated: 2016/09/02 11:27:07 by aburroug         ###   ########.fr       */
+/*   Updated: 2016/09/03 16:29:23 by aburroug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rtv1.h"
 
-t_vect	*cross_product(t_vect *v1, t_vect *v1)
+t_vect	*cross_product(t_vect *v1, t_vect *v2)
 {
 	float	old_x;
 	float	old_y;

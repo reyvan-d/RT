@@ -6,7 +6,7 @@
 /*   By: aburroug <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/03 10:51:05 by aburroug          #+#    #+#             */
-/*   Updated: 2016/09/03 10:55:42 by aburroug         ###   ########.fr       */
+/*   Updated: 2016/09/03 16:26:21 by aburroug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,17 @@ char	*ft_strrev(char *s)
 	char	tmp;
 
 	
-	if (str)
+	if (s)
 	{
 		i = 0;
-		len = ft_strlen(str);
+		len = ft_strlen(s);
 		while (i < len / 2)
 		{
-			tmp = str[i];
-			str[i] = str[len - i - 1];
-			str[len - i - 1] = tmp;
+			tmp = s[i];
+			s[i] = s[len - i - 1];
+			s[len - i - 1] = tmp;
 			i++;
 		}
 	}
-	return (str);
+	return (s);
 }

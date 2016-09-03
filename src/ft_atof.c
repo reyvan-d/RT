@@ -6,7 +6,7 @@
 /*   By: aburroug <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/03 10:32:44 by aburroug          #+#    #+#             */
-/*   Updated: 2016/09/03 10:46:04 by aburroug         ###   ########.fr       */
+/*   Updated: 2016/09/03 16:28:25 by aburroug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ float	ft_atof(const char *str)
 		else if (ft_isdigit(*str))
 		{
 			if (dot)
-				fact /= 10.0f;
+				factor /= 10.0f;
 			res = res * 10.0f + (float)(*str - '0');
 		}
 		str++;
 	}
-	return (res * fact);
+	return (res * factor);
 }

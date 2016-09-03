@@ -6,7 +6,7 @@
 /*   By: aburroug <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/02 12:13:54 by aburroug          #+#    #+#             */
-/*   Updated: 2016/09/03 09:25:51 by aburroug         ###   ########.fr       */
+/*   Updated: 2016/09/03 16:23:41 by aburroug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ t_uint	ft_get_pixel_from_image(t_img *i, int x, int y)
 		return (0);
 	if (x > i->width || x < 0 || y < 0 || y > i->height)
 		return (0);
-	color = i->udata[y->y * i->sl_div + x * i->bpp_div];
+	color = i->udata[y * i->sl_div + x * i->bpp_div];
 	return (color);
 }

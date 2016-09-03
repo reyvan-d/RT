@@ -6,9 +6,11 @@
 /*   By: aburroug <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/02 11:58:01 by aburroug          #+#    #+#             */
-/*   Updated: 2016/09/02 12:13:30 by aburroug         ###   ########.fr       */
+/*   Updated: 2016/09/03 16:36:21 by aburroug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "rtv1.h"
 
 void	ft_fill_img(t_img *i, unsigned int color)
 {

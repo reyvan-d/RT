@@ -6,7 +6,7 @@
 /*   By: khansman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/16 15:12:40 by khansman          #+#    #+#             */
-/*   Updated: 2016/09/03 10:58:27 by aburroug         ###   ########.fr       */
+/*   Updated: 2016/09/03 16:36:23 by aburroug         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -296,29 +296,29 @@ int				hit_cone(t_obj *c, t_vect *r_pos, t_vect *r_dir, float *t);
 int				ft_ahextocolour(char *ahex);
 
 float			dot_product(t_vect *v1, t_vect *v2);
-t_vect			*clamp_vec(t_vect *v1, double min, double max);
-float			clamp(double n, double min2, double max2);
+t_vect			*clamp_vec(t_vect *v1, float min, float max);
+float			clamp(float n, float min2, float max2);
 t_vect			*turn_orthogonal(t_vect *v1);
 t_vect			*cross_product(t_vect *v1, t_vect *v2);
-t_vect			*scalar_multiply(t_vect *a, double amount);
+t_vect			*scalar_multiply(t_vect *a, float amount);
 t_vect			*normalize(t_vect *a);
 t_vect			*multiply(t_vect *v1, t_vect *v2);
 t_vect			*add(t_vect *v1, t_vect *v2);
 t_vect			*subtract(t_vect *v1, t_vect *v2);
 t_vect			*set_to(t_vect *v1, t_vect *v2);
-t_vect			length_vec(t_vect *z);
+float			length_vec(t_vect *z);
 float			to_rad(float r);
 float			saturate(float n);
-t_vect			saturate_vec(t_vect *n);
+t_vect			*saturate_vec(t_vect *n);
 void			ft_fill_img(t_img *i, unsigned int color);
 t_uint			ft_get_pixel_from_image(t_img *i, int x, int y);
 void			ft_pixel_put_to_image(t_img *i, int x, int y, unsigned int color);
 t_img			*ft_load_img(void *mlx, char *src);
 t_img			*ft_new_img(void *mlx, int width, int height);
 size_t			ft_tablen(void **tab);
-double			ft_atof(const char *str);
+float			ft_atof(const char *str);
 char			*ft_convert_base(char *nbr, char *base_from, char *base_to);
-size_t			ft_len_until(const char *str, char c);
+size_t			ft_len_untill(const char *str, char c);
 char			*ft_strrev(char *s);
 
 void			ft_exit(int error);

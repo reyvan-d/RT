@@ -14,28 +14,45 @@ OBJDIR = obj/
 
 HEADERDIR = .
 
-SRCS = main.c				\
-	   raytracer.c			\
-	   load_tab_obj.c		\
-	   threads.c			\
-	   obj_sphere_plane.c	\
-	   obj_cyl_cone.c		\
-	   obj_tri_circ.c		\
-	   colour_phong.c		\
-	   input.c				\
-	   ft_ahextoi.c			\
-	   exit.c				\
-	   validate_map.c		\
-	   camera.c				\
-	   v3d_calc.c			\
-	   v3d_calc2.c			\
-	   v3d_calc3.c			\
-	   ft_image.c			\
-	   ft_convert_base.c	\
+SRCSDIR = /src
+
+SRCS = main.c					\
+	   raytracer.c				\
+	   load_tab_obj.c			\
+	   threads.c				\
+	   obj_sphere_plane.c		\
+	   obj_cyl_cone.c			\
+	   obj_tri_circ.c			\
+	   colour_phong.c			\
+	   input.c					\
+	   ft_ahextoi.c				\
+	   exit.c					\
+	   validate_map.c			\
+	   camera.c					\
+	   ft_convert_base.c		\
+	   add.c					\
+	   clamp.c					\
+	   clamp_vec.c				\
+	   cross_product.c			\
+	   ft_fill_img.c			\
+	   ft_get_pixel_from_image.c\
+	   ft_load_img.c			\
+	   ft_new_img.c				\
+	   ft_pixel_put_to_image.c	\
+	   length_vec.c				\
+	   multiply.c				\
+	   normalize.c				\
+	   saturate.c				\
+	   saturate_vec.c			\
+	   scalar_multiply.c		\
+	   set_to.c					\
+	   subtract.c				\
+	   to_rad.c					\
+	   turn_orthogonal.c		\
 
 HEADER = $(NAME).h
 
-OBJS = $(addprefix $(OBJDIR),$(subst .c,.o,$(SRCS)))
+OBJS = $(addprefix $(OBJDIR),$(subst .c,.o,$(SRCSDIR)$(SRCS)))
 
 INCLUDES = -I libft/includes
 
